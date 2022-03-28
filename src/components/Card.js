@@ -8,11 +8,24 @@ import { useState } from 'react'
 
 
 
-const Card = (props) => {
+const Card = ({card, voltear}) => {
+
+const [carta, setCarta] = useState(card);
+
+function tocarCarta(){
+voltear();
+console.log("tocar Carta");
+setCarta(!carta);
+
+}
+
+
+
 
    return (
     <>
-        {props.img === true ? <img src={reverse} alt="RedCard" /> : <img src={black} alt="BlackCard" />}
+        {carta === true ? 
+        <button><img src={black} onClick={tocarCarta} alt="ReverseCard"/> </button>: <button><img src={red} onClick={tocarCarta} alt="RedCard"/> </button>}
     </>
   )
 }
