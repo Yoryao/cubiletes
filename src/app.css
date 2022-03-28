@@ -1,0 +1,10 @@
+body {
+    background-image: url("poker_backgroud_img.jpg") ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}

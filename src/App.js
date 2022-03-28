@@ -1,21 +1,20 @@
 import Card from "./components/Card";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Title from "./components/Title";
+import "./app.css"
+
 
 
 function App() {
   return (
     <>
-            <div>PROBANDO EL DIV PARA LAS CARTAS</div>
-
+        <Title></Title>
+        <Header></Header>
         <Card img={true}></Card>
-        <Card img={false}></Card>
         <Card img={true}></Card>
-    
-    
-    
-    
-    
-    
-    
+        <Card img={true}></Card>
+        <Footer></Footer>
     </>
   );
 }
