@@ -18,9 +18,9 @@ console.log("contador: " + contador)
   return (
       <>
         <Header message={contador}></Header>
-        <Card card={true} voltear={voltear}  ></Card>
-        <Card card={true} voltear={voltear}  ></Card>
-        <Card card={true} voltear={voltear}  ></Card>
+        <Card card={true} voltear={voltear} message={contador} ></Card>
+        <Card card={true} voltear={voltear} message={contador} ></Card>
+        <Card card={true} voltear={voltear} message={contador} ></Card>
       </>
   )
 }

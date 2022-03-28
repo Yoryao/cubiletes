@@ -1,33 +1,38 @@
-import React from 'react'
-import red from     "../../src/red_heart_card.png"
-import black from   "../../src/spade_black_card.png"
-import reverse from   "../../src/reverse_card.png"
-import "./card.css"
-import { useState } from 'react'
+import React from "react";
+import red from "../../src/red_heart_card.png";
+import black from "../../src/spade_black_card.png";
+import reverse from "../../src/reverse_card.png";
+import "./card.css";
+import { useState } from "react";
+
+const Card = ({ card, voltear, message }) => {
+  const [carta, setCarta] = useState(card);
+const [elegida, setElegida] = useState(false)
 
 
+  function tocarCarta() {
+    if (message < 3 && !elegida) {
+      voltear();
+      console.log("carta tocada")
+      setCarta(false);
+      setElegida(true)
+    
+    }
+  }
 
-
-const Card = ({card, voltear}) => {
-
-const [carta, setCarta] = useState(card);
-
-function tocarCarta(){
-voltear();
-console.log("tocar Carta");
-setCarta(!carta);
-
-}
-
-
-
-
-   return (
+  return (
     <>
-        {carta === true ? 
-        <button><img src={black} onClick={tocarCarta} alt="ReverseCard"/> </button>: <button><img src={red} onClick={tocarCarta} alt="RedCard"/> </button>}
+      {carta === true ? (
+        <button>
+          <img src={reverse} onClick={tocarCarta} alt="ReverseCard" />{" "}
+        </button>
+      ) : (
+        <button disabled={true}>
+          <img src={red} onClick={tocarCarta} alt="RedCard" />{" "}
+        </button>
+      )}
     </>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;
