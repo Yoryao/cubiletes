@@ -1,6 +1,7 @@
 import CardContainer from "./components/CardContainer";
 import Footer from "./components/Footer";
 import Title from "./components/Title";
+import ResetButton from "./components/ResetButton"
 import "./app.css";
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
       <Title></Title>
 
       <CardContainer></CardContainer>
-
+      <ResetButton></ResetButton>
       <Footer></Footer>
     </>
   );

@@ -5,22 +5,21 @@ import { useState } from 'react'
 
 const CardContainer = () => {
 
-const [contador, setContador] = useState(0)
-
+  const [estado , setEstado] = useState(false)
+  const [contador, setContador] = useState(0)
   
-const voltear = () => {
-setContador(contador + 1)
-console.log("contador: " + contador)
-}
-
-
+  
+  const voltear = () => {
+  setContador(contador + 1)
+  console.log("contador: " + contador)
+  }
 
   return (
       <>
         <Header message={contador}></Header>
-        <Card card={true} voltear={voltear} message={contador} ></Card>
-        <Card card={true} voltear={voltear} message={contador} ></Card>
-        <Card card={true} voltear={voltear} message={contador} ></Card>
+        <Card card={estado}  voltear={voltear} message={contador} ></Card>
+        <Card card={estado}  voltear={voltear} message={contador} ></Card>
+        <Card card={estado}  voltear={voltear} message={contador} ></Card>
       </>
   )
 }
