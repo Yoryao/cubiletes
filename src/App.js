@@ -10,7 +10,6 @@ function App() {
       <Title></Title>
 
       <CardContainer></CardContainer>
-      <ResetButton></ResetButton>
       <Footer></Footer>
     </>
   );

@@ -1,12 +1,6 @@
 import React from 'react'
 import resetButton from "../../src/resetButton.png"
-const ResetButton = () => {
-
-
-const reset = () => {
-    console.log("Reset!")
-}
-
+const ResetButton = ( { reset } ) => {
 
 
 
